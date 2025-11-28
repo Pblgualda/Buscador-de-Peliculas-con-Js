@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+    <script src="index.js"></script>
+    <style>
+        body
+        {
+            background-color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        div
+        {
+            width: 40vh;
+            height:60vh;
+            padding: 5vh;
+            border-radius: 10vh;
+            border: solid 2px;
+            display: flex;
+            flex-direction:column;
+            
+        }
+        div h2
+        {
+            font-size: 2vh;
+            width: 100%;
+        }
+        div img
+        {
+            width: 100%;
+            height: 95%;
+        }
+        #contenedor
+        {
+            padding: 10vh;
+            border: none;
+            display: grid;
+            grid-template-columns: 50vh 50vh 50vh;
+        }
+        #detalles
+        {
+            width: 50%;
+            height: 50%;
+            position: fixed;
+            align-self: center;
+            background-color: blueviolet;
+            left: 20%;
+        }
+
+        #detalles img
+        {
+            width: 30%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <input id="busqueda" type="text" placeholder="Nombre">
+            <button id="btnBuscar">Buscar</button>
+        </nav>
+
+    </header>
+
+    <div id="contenedor">
+    </div>
+    <button id="btnCargar">Cargar</button>
+
+<footer>
+
+</footer>
+</body>
+</html>
