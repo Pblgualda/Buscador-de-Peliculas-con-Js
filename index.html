@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colores</title>
+    <title>Busqueda</title>
     <script src="index.js"></script>
     <style>
         body
@@ -30,10 +30,16 @@
             font-size: 2vh;
             width: 100%;
         }
-        div img
+        div .poster
         {
-            width: 100%;
-            height: 95%;
+            width: 80%;
+            height: 70%;
+        }
+
+        div .fav
+        {
+            width: 5rem;
+            height: 5rem;
         }
         #contenedor
         {
@@ -41,36 +47,87 @@
             border: none;
             display: grid;
             grid-template-columns: 50vh 50vh 50vh;
+            column-gap: 5rem;
+            row-gap: 2rem;
         }
         #detalles
         {
             width: 50%;
-            height: 50%;
+            height: 70%;
             position: fixed;
             align-self: center;
             background-color: blueviolet;
             left: 20%;
+            opacity: 100%;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 1fr;
         }
 
         #detalles img
         {
-            width: 30%;
+            width: 80%;
             height: 80%;
         }
+
+        #PaginaInicio
+        {
+            position: fixed;
+            top: 50%;
+            left: 40%;
+            right: 50%;
+            bottom: 50%;
+            width: 50vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+    
+        }
+
+        #humo
+        {
+            top: 0vh;
+            opacity: 80%;
+            background-color: black;
+           position: fixed;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           z-index: 4;
+        }
+
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <input id="busqueda" type="text" placeholder="Nombre">
-            <button id="btnBuscar">Buscar</button>
-        </nav>
+    <section id="vistaBuscador" style="visibility: hidden;">    
+        <header>
+            <nav>
+                <input id="busqueda" type="text" placeholder="Nombre">
+                <button id="btnBuscar">Buscar</button>
+                <select id="categoria">
+                    <option value="cualquiera">Cualquiera</option>
+                    <option value="pelicula">Pelicula</option>
+                    <option value="serie">Serie</option>
+                </select>
+                <label for="fav">Favoritos</label>
+                <button id="fav">Ver</button>
+            </nav>
+        </header>
 
-    </header>
+        <div id="contenedor">
+            <!--Esta parte es en donde aparecen las pelis-->
+        </div>
+        </section>
+        <!---->
+        <section id="PaginaInicio">
+     
+            <h1>Buscar Pelis</h1>
+            <p>En esta pagina puedes buscar peliculas y ver sus detalles</p>
+            <button id="BotonInicio">Buscar</button>
 
-    <div id="contenedor">
-    </div>
-    <button id="btnCargar">Cargar</button>
+        </section>
 
 <footer>
 
